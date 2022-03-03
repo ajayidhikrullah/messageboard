@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ViewPostController;
 
 /*
@@ -21,7 +22,7 @@ use App\Http\Controllers\ViewPostController;
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/viewpost', [ViewPostController::class, 'viewPost']);
-Route::POST('/', 'HomeController@index');
+Route::post('/create', [MessageController::class, 'create']);
 // Route::get('/about', function(){
 //     // return view('')
 //     echo "'how far na?'";

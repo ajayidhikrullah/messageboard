@@ -9,10 +9,10 @@
 <Form action="/create" method="POST">
     <input type="text" name="title" placeholder="Message title please">
     <br><hr>
-    <input type="text" name="content" placeholder="message body">
+    <input type="text" name="body" placeholder="message body">
+{{csrf_field()}}
 <br><hr>
-    <button type="submit" name="submit">Submit</button>
-
+    <button type="submit">Submit</button>
 </Form>
 
 <hr>
