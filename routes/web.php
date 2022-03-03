@@ -21,7 +21,7 @@ use App\Http\Controllers\ViewPostController;
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/viewpost', [ViewPostController::class, 'viewPost']);
-
+Route::POST('/', 'HomeController@index');
 // Route::get('/about', function(){
 //     // return view('')
 //     echo "'how far na?'";
