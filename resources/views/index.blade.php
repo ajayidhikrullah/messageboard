@@ -21,9 +21,12 @@
 <hr>
 <ul>
     @foreach ($messages as $message)
+    <h3 style="color:red"><i>from...</i>Nurudeen Ajayi</h3>
         <b><li>{{$message->title}}</li></b>
             <i><strong>{{$message->body}}</strong></i><br>
             <i>{{$message->created_at->diffForHumans()}}</i>
+            <a href="/message/{{$message->id}}">View Message</a>
+
             <hr>
     @endforeach
 </ul>

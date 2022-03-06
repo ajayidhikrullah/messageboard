@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MessageController;
-use App\Http\Controllers\ViewPostController;
+use App\Http\Controllers\ViewMessageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,12 +16,9 @@ use App\Http\Controllers\ViewPostController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/viewpost', [ViewPostController::class, 'viewPost']);
+Route::get('/message/{id}', [MessageController::class, 'view']);
 Route::post('/create', [MessageController::class, 'create']);
 // Route::get('/about', function(){
 //     // return view('')
