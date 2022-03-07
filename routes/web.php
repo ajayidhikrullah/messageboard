@@ -20,7 +20,3 @@ use App\Http\Controllers\ViewMessageController;
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/message/{id}', [MessageController::class, 'view']);
 Route::post('/create', [MessageController::class, 'create']);
-// Route::get('/about', function(){
-//     // return view('')
-//     echo "'how far na?'";
-// });
